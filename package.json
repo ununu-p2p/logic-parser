@@ -1,0 +1,56 @@
+{
+  "name": "logic-parser",
+  "version": "0.0.0",
+  "description": "Unofficial parser for Logic Pro project files (.logic)",
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register --watch-extensions ts,tsx test/**/*.{ts,tsx}",
+    "testwith": "mocha -r ts-node/register --watch-extensions ts,tsx test/**/*.{ts,tsx} --grep",
+    "coverage": "nyc mocha -r ts-node/register --watch-extensions ts,tsx test/**/*.{ts,tsx}",
+    "report-coverage": "nyc --reporter=text-lcov mocha -r ts-node/register --watch-extensions ts,tsx test/**/*.{ts,tsx} > coverage.lcov && codecov",
+    "build": "tsc"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ununu-p2p/logic-parser.git"
+  },
+  "keywords": [
+    "logic pro",
+    "logic",
+    "parser",
+    "music",
+    "live"
+  ],
+  "author": "Shresth Agrawal <shresthagrawal.31@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ununu-p2p/logic-parser/issues"
+  },
+  "homepage": "https://github.com/ununu-p2p/logic-parser#readme",
+  "devDependencies": {
+    "@types/chai": "4.2.5",
+    "@types/chai-as-promised": "7.1.2",
+    "@types/mocha": "5.2.7",
+    "@types/node": "12.7.5",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "codecov": "3.7.1",
+    "fs-monkey": "^0.3.3",
+    "memfs": "^3.0.4",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.0",
+    "ts-node": "8.5.2",
+    "typescript": "3.6.3"
+  },
+  "dependencies": {}
+}
