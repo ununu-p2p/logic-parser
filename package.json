@@ -1,6 +1,6 @@
 {
   "name": "ununu-logic-parser",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Unofficial parser for Logic Pro project files (.logic)",
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.js",
